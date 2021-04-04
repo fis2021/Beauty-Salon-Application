@@ -1,4 +1,2 @@
 # Beauty-Salon-Application
-# Aplicatia este construita pentru a veni in ajutorul clientilor si salonului astfel: clientii isi 
-# pot face rezervari intr-un mod rapid si eficient, pot efectua plata in avans, iar salonul 
-# asigura clientilor o varietate de servicii. 
+# Aplicația este construită pentru a veni în ajutorul clienților și salonului astfel: clienții își pot face rezervări într-un mod rapid și eficient, pot alege angajatul favorit, pot vedea lista de prețuri, iar salonul asigură clienților o varietate de servicii. 
