@@ -3,7 +3,8 @@ package org.BSA.services;
 import org.BSA.exceptions.UsernameAlreadyExistsException;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
-;
+import org.BSA.exceptions.UsernameDoesNotExists;
+
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -21,7 +22,7 @@ public class UserService {
 
     public static void initDatabase() {
         Nitrite database = Nitrite.builder()
-                .filePath(getPathToFile("registration-example.db").toFile())
+                .filePath(getPathToFile("BSA.db").toFile())
                 .openOrCreate("test", "test");
 
         userRepository = database.getRepository(User.class);
@@ -60,5 +61,7 @@ public class UserService {
         return md;
     }
 
-
+    public static ObjectRepository<User> getUserRepository() {
+        return userRepository;
+    }
 }

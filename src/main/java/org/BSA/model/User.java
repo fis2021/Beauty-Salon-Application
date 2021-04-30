@@ -84,10 +84,6 @@ public class User {
 
         if (username != null ? !username.equals(user.username) : user.username != null) return false;
         if (password != null ? !password.equals(user.password) : user.password != null) return false;
-        if (telefon != null ? !telefon.equals(user.telefon) : user.telefon != null) return false;
-        if (nume != null ? !nume.equals(user.nume) : user.nume != null) return false;
-        if (prenume != null ? !prenume.equals(user.prenume) : user.prenume != null) return false;
-        if (email != null ? !email.equals(user.email) : user.email != null) return false;
         return role != null ? role.equals(user.role) : user.role == null;
     }
 
@@ -97,5 +93,12 @@ public class User {
         result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + (role != null ? role.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString(){
+        String t;
+        t=nume+" "+prenume+"\n"+telefon+"\n"+email;
+        return t;
     }
 }

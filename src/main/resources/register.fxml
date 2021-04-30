@@ -1,71 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="TOP_CENTER" cache="true" hgap="10" prefHeight="600" style="-fx-background-color: YELLOW " prefWidth="800" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.BSA.controllers.RegistrationController">
+<GridPane alignment="TOP_CENTER" cache="true" hgap="10" prefHeight="600" prefWidth="800" style="-fx-background-color: YELLOW " vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.BSA.controllers.RegistrationController">
     <padding>
         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
     </padding>
-    <Text id="title-text" text="Beauty Salon" wrappingWidth="135.41990661621094" GridPane.columnIndex="1" GridPane.columnSpan="2">
-      <font>
-         <Font name="Calibri Bold" size="18.0" />
-      </font></Text>
-    <Label text="Nume:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Text id="title-text" text="Beauty Salon" wrappingWidth="135.41990661621094" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+        <font>
+            <Font name="Calibri Bold" size="18.0" />
+        </font></Text>
+    <Label text="Nume:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-    <TextField fx:id="numeField" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+    <TextField fx:id="nume" GridPane.columnIndex="2" GridPane.rowIndex="2" />
 
-    <Label text="Prenume:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Label text="Prenume:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
-    <TextField fx:id="prenumeField" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <TextField fx:id="prenume" GridPane.columnIndex="2" GridPane.rowIndex="3" />
 
-    <Label text="Username:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Label text="Username:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
 
-    <TextField fx:id="usernameField" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+    <TextField fx:id="usernameField" GridPane.columnIndex="2" GridPane.rowIndex="5" />
 
-    <Label text="Password:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    <Label text="Password:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
 
-    <PasswordField fx:id="passwordField" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+    <PasswordField fx:id="passwordField" GridPane.columnIndex="2" GridPane.rowIndex="6" />
 
-    <Label text="Telefon:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+    <Label text="Telefon:" GridPane.columnIndex="1" GridPane.rowIndex="7" />
 
-    <TextField fx:id="telefonField" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+    <TextField fx:id="telefon" GridPane.columnIndex="2" GridPane.rowIndex="7" />
 
-    <Label text="Email:" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+    <Label text="Email:" GridPane.columnIndex="1" GridPane.rowIndex="8" />
 
-    <TextField fx:id="emailField" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-    <Label text="Role:" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+    <TextField fx:id="email" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+    <Label text="Role:" GridPane.columnIndex="1" GridPane.rowIndex="9" />
 
-    <ChoiceBox fx:id="role" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+    <ChoiceBox fx:id="role" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="9">
     </ChoiceBox>
 
 
 
-    <Text fx:id="registrationMessage" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="10">
-        <Button fx:id="button1" onAction="#handleRegisterAction" text="Creare cont" />
+    <Text fx:id="registrationMessage" GridPane.columnIndex="2" GridPane.rowIndex="11"><font>
+        <Font name="System Bold" size="12.0" />
+    </font></Text>
+
+    <HBox alignment="bottom_right" prefHeight="26.0" prefWidth="199.0" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="10">
+        <Button fx:id="buttonCreare" onAction="#handleRegisterAction" prefHeight="26.0" prefWidth="164.0" text="Inregistrare"><font>
+            <Font name="System Bold" size="12.0" />
+        </font></Button>
     </HBox>
-   <columnConstraints>
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
-   <opaqueInsets>
-      <Insets />
-   </opaqueInsets>
+
+    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="10">
+        <Button fx:id="button" onAction="#Backaction" prefHeight="26.0" prefWidth="63.0" text="Inapoi"><font>
+            <Font name="System Bold" size="12.0" />
+        </font></Button>
+
+    </HBox>
+
 
 </GridPane>

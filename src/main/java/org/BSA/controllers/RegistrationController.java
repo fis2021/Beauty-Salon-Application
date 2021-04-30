@@ -1,5 +1,4 @@
-    package org.BSA.controllers;
-
+package org.BSA.controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,8 +12,9 @@ import javafx.stage.Stage;
 import org.BSA.exceptions.UsernameAlreadyExistsException;
 import org.BSA.services.UserService;
 
+import java.io.IOException;
 
-    public class RegistrationController {
+public class RegistrationController {
 
     @FXML
     private Text registrationMessage;
@@ -23,35 +23,51 @@ import org.BSA.services.UserService;
     @FXML
     private TextField usernameField;
     @FXML
+    private TextField nume;
+    @FXML
+    private TextField prenume;
+    @FXML
     private ChoiceBox role;
     @FXML
-    private TextField telefonField;
+    private TextField telefon;
     @FXML
-    private TextField numeField;
+    private TextField email;
     @FXML
-    private TextField prenumeField;
-    @FXML
-    private TextField emailField;
+    private Button button;
+
+
+
+
+
     @FXML
     public void initialize() {
         role.getItems().addAll("Client", "Manager");
     }
+
     @FXML
-    private Button button1;
-
-
-
-        public void handleRegisterAction() throws Exception {
+    public void handleRegisterAction() throws Exception {
         try {
-           UserService.addUser(usernameField.getText(), passwordField.getText(), (String) role.getValue(),telefonField.getText(), numeField.getText(), prenumeField.getText(), emailField.getText());
-            registrationMessage.setText("Account created successfully!");
-            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("paginaprincipala.fxml"));
-            Parent root= loader.load();
-            Stage stage = (Stage) (button1.getScene().getWindow());
-            stage.setScene(new Scene(root));
-            stage.show();
+            UserService.addUser(usernameField.getText(), passwordField.getText(), (String) role.getValue(),telefon.getText(), nume.getText(),prenume.getText(),email.getText());
+            registrationMessage.setText("Contul a fost creat cu succes!");
+
         } catch (UsernameAlreadyExistsException e) {
             registrationMessage.setText(e.getMessage());
         }
     }
+
+
+    @FXML
+    public void Backaction() throws Exception{
+        try{
+            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
+            Stage stage = (Stage) (button.getScene().getWindow());
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch(IOException e){
+            registrationMessage.setText("eroare!");
+        }
+    }
+
+
 }
