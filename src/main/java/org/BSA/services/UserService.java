@@ -1,20 +1,16 @@
 package org.BSA.services;
-
 import org.BSA.exceptions.UsernameAlreadyExistsException;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.BSA.exceptions.UsernameDoesNotExists;
-
+import org.BSA.model.User;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Objects;
-import org.BSA.model.User;
-import org.BSA.services.FileSystemService;
 
 import static org.BSA.services.FileSystemService.getPathToFile;
-
 
 public class UserService {
 
@@ -27,18 +23,39 @@ public class UserService {
 
         userRepository = database.getRepository(User.class);
     }
+    public static User login(String username, String password) throws UsernameDoesNotExists{
+        User crt;
 
+        crt = attemptLogin(username, password);
+
+        if(crt == null){
+            throw new UsernameDoesNotExists(username);
+        }
+
+        return crt;
+    }
+
+    public static User attemptLogin(String username, String password){
+        for (User user : userRepository.find()) {
+            if(Objects.equals(username, user.getUsername()) && Objects.equals(encodePassword(username, password), user.getPassword())){
+                return user;
+            }
+        }
+
+        return null;
+    }
     public static void addUser(String username, String password, String role, String telefon,String nume,String prenume,String email) throws UsernameAlreadyExistsException {
         checkUserDoesNotAlreadyExist(username);
         userRepository.insert(new User(username, encodePassword(username, password), role,telefon,nume,prenume,email));
     }
-
     private static void checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistsException {
         for (User user : userRepository.find()) {
             if (Objects.equals(username, user.getUsername()))
                 throw new UsernameAlreadyExistsException(username);
         }
     }
+
+
 
     private static String encodePassword(String salt, String password) {
         MessageDigest md = getMessageDigest();
@@ -60,6 +77,7 @@ public class UserService {
         }
         return md;
     }
+
 
     public static ObjectRepository<User> getUserRepository() {
         return userRepository;
