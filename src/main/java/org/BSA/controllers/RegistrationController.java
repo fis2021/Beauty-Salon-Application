@@ -68,6 +68,4 @@ public class RegistrationController {
             registrationMessage.setText("eroare!");
         }
     }
-
-
 }
