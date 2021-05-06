@@ -21,6 +21,7 @@ import static org.dizitart.no2.objects.filters.ObjectFilters.eq;
 
 public class Login {
     private final ObjectRepository<User> REPOSITORY = UserService.getUserRepository();
+    public static String getUserCurrent;
     @FXML
     private Text registrationMessage;
     @FXML
@@ -34,6 +35,7 @@ public class Login {
     public void handleLoginAction() throws Exception {
         try {
             User user = UserService.login(usernameField.getText(), passwordField.getText());
+            getUserCurrent=usernameField.getText();
             String detalii = user.toString();
             if(user.getRole().equals("Manager")) {
                 FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("paginaManager.fxml"));

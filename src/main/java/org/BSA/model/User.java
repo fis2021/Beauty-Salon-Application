@@ -11,6 +11,7 @@ public class User {
     private String nume;
     private String prenume;
     private String email;
+    private String optiune;
 
     public User(String username, String password, String role, String telefon,String nume,String prenume,String email) {
         this.username = username;
@@ -20,6 +21,7 @@ public class User {
         this.nume=nume;
         this.prenume=prenume;
         this.email=email;
+        this.optiune="";
     }
 
     public User() {
@@ -70,10 +72,13 @@ public class User {
     }
     public void setEmail(String email) { this.email = email; }
 
+    public void setOptiune(String optiune) {
+        this.optiune = optiune;
+    }
 
-
-
-
+    public String getOptiune() {
+        return optiune;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -101,4 +106,5 @@ public class User {
         t=nume+" "+prenume+"\n"+telefon+"\n"+email;
         return t;
     }
+
 }
