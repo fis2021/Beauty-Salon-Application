@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color:  BISQUE;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.BSA.controllers.PaginaClientAlegereOptiune">
+   <children>
+      <Button fx:id="Tuns" layoutX="404.0" layoutY="91.0" mnemonicParsing="false" onAction="#adaugareTuns" style="-fx-background-color:  LIGHTCORAL;" text="Tuns" textFill="#160000">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="Vopsit" layoutX="510.0" layoutY="189.0" mnemonicParsing="false" onAction="#adaugareVopsit" style="-fx-background-color:  LIGHTCORAL;" text="Vopsit">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="Makeup" layoutX="404.0" layoutY="150.0" mnemonicParsing="false" onAction="#adaugareMakeup" style="-fx-background-color:  LIGHTCORAL;" text="Makeup">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="Manichiura" layoutX="407.0" layoutY="220.0" mnemonicParsing="false" onAction="#adaugareManichiura" style="-fx-background-color:  LIGHTCORAL;" text="Manichiura">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="Pedichiura" layoutX="508.0" layoutY="260.0" mnemonicParsing="false" onAction="#adaugarePedichiura" style="-fx-background-color:  LIGHTCORAL;" text="Pedichiura">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="Tratamentefaciale" layoutX="406.0" layoutY="310.0" mnemonicParsing="false" onAction="#adaugareTratamenteFaciale" style="-fx-background-color:  LIGHTCORAL;" text="Tratamente faciale">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="Gene" layoutX="513.0" layoutY="117.0" mnemonicParsing="false" onAction="#adaugareGene" style="-fx-background-color:  LIGHTCORAL;" text="Gene">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Text fx:id="Mesaj" layoutX="353.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="236.6204833984375" />
+      <Text fx:id="Mesaj" layoutX="353.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="236.6204833984375" />
+      <Text fx:id="Mesaj" layoutX="359.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="223.287109375" />
+      <Text fx:id="Mesaj" layoutX="359.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="223.287109375" />
+      <Text fx:id="Mesaj" layoutX="375.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="206.8033447265625" />
+      <Text fx:id="Mesaj" layoutX="364.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="213.28717041015625" />
+      <Text fx:id="Mesaj" layoutX="373.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.28717041015625" />
+      <ImageView fitHeight="329.0" fitWidth="354.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/beautysalon.png" />
+         </image>
+      </ImageView>
+      <TextField alignment="CENTER" prefHeight="84.0" prefWidth="600.0" text="Alegere Optiune Client">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

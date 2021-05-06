@@ -23,38 +23,40 @@ public class UserService {
 
         userRepository = database.getRepository(User.class);
     }
-    public static User login(String username, String password) throws UsernameDoesNotExists{
+
+    public static User login(String username, String password) throws UsernameDoesNotExists {
         User crt;
 
         crt = attemptLogin(username, password);
 
-        if(crt == null){
+        if (crt == null) {
             throw new UsernameDoesNotExists(username);
         }
 
         return crt;
     }
 
-    public static User attemptLogin(String username, String password){
+    public static User attemptLogin(String username, String password) {
         for (User user : userRepository.find()) {
-            if(Objects.equals(username, user.getUsername()) && Objects.equals(encodePassword(username, password), user.getPassword())){
+            if (Objects.equals(username, user.getUsername()) && Objects.equals(encodePassword(username, password), user.getPassword())) {
                 return user;
             }
         }
 
         return null;
     }
-    public static void addUser(String username, String password, String role, String telefon,String nume,String prenume,String email) throws UsernameAlreadyExistsException {
+
+    public static void addUser(String username, String password, String role, String telefon, String nume, String prenume, String email) throws UsernameAlreadyExistsException {
         checkUserDoesNotAlreadyExist(username);
-        userRepository.insert(new User(username, encodePassword(username, password), role,telefon,nume,prenume,email));
+        userRepository.insert(new User(username, encodePassword(username, password), role, telefon, nume, prenume, email));
     }
+
     private static void checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistsException {
         for (User user : userRepository.find()) {
             if (Objects.equals(username, user.getUsername()))
                 throw new UsernameAlreadyExistsException(username);
         }
     }
-
 
 
     private static String encodePassword(String salt, String password) {
@@ -81,5 +83,25 @@ public class UserService {
 
     public static ObjectRepository<User> getUserRepository() {
         return userRepository;
+    }
+
+    public static void adaugareOptiune(String username, String optiune) {
+        for (User user : userRepository.find()) {
+            if (Objects.equals(username, user.getUsername())) {
+                user.setOptiune(optiune);
+                userRepository.update(user);
+            }
+
+        }
+    }
+
+    public static String getOptiune(String username) {
+        for (User user : userRepository.find()) {
+            if (Objects.equals(username, user.getUsername())) {
+                return user.getOptiune();
+            }
+
+        }
+        return null;
     }
 }

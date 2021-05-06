@@ -75,7 +75,7 @@ public class PaginaClient {
 
     public void handleAlegereOptiuneDorita() throws IOException {
         try {
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("alegereoptiunedorita.fxml"));
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("clientAlegereOptiune.fxml"));
             Stage stage = (Stage) (butonAngajati.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
