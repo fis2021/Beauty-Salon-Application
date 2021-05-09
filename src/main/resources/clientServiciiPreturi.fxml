@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.BSA.controllers.PaginaClientServiciiPreturi">
+    <children>
+        <TableView fx:id="table" layoutX="51.0" layoutY="98.0" prefHeight="231.0" prefWidth="600.0" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="98.0">
+            <columns>
+                <TableColumn fx:id="id" prefWidth="51.999998688697815" text="ID" />
+                <TableColumn fx:id="servicii" prefWidth="143.99993515014648" text="SERVICII" />
+                <TableColumn fx:id="preturi" prefWidth="410.66673278808594" text="PRETURI" />
+            </columns>
+        </TableView>
+        <Button fx:id="backButton" layoutX="-2.0" layoutY="328.0" onAction="#handleBackAction" prefHeight="73.0" prefWidth="606.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Inapoi la pagina de client"><font>
+            <Font name="System Bold" size="12.0" />
+        </font></Button>
+        <TextArea focusTraversable="false" layoutX="108.0" layoutY="1.0" prefHeight="97.0" prefWidth="491.0" text="&#10;               Servicii si Preturi">
+            <font>
+                <Font name="Book Antiqua Bold Italic" size="24.0" />
+            </font>
+        </TextArea>
+        <ImageView fitHeight="97.0" fitWidth="131.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Image/beautysalon.png" />
+            </image>
+        </ImageView>
+    </children>
+
+</AnchorPane>
