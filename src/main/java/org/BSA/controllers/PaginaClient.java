@@ -62,7 +62,7 @@ public class PaginaClient {
 
     public void handleVizualizareListaServiciiSiPreturi() throws IOException {
         try {
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("listaserviciisipreturi.fxml"));
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("clientServiciiPreturi.fxml"));
             Stage stage = (Stage) (butonAlegereAngajat.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
