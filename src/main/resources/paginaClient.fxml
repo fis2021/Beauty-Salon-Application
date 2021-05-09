@@ -38,7 +38,7 @@
         </font>
         </Button>
 
-        <Button fx:id="butonAngajati" onAction="#handleAngajati" prefHeight="46.0" prefWidth="328.0" style="-fx-background-color: HOTPINK; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Vizualizare lista angajati si alegerea persoanei dorite"><font>
+        <Button fx:id="butonAlegereAngajat" onAction="#handleAlegereAngajat" prefHeight="46.0" prefWidth="328.0" style="-fx-background-color: HOTPINK; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Vizualizare lista angajati si alegerea persoanei dorite"><font>
             <Font name="System Bold" size="12.0" />
         </font>
         </Button>
