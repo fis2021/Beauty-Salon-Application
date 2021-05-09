@@ -14,7 +14,7 @@ public class AngajatService {
 
     public static void initDatabase() {
         Nitrite database = Nitrite.builder()
-                .filePath(getPathToFile("Baza_de_date_angajat.db").toFile())
+                .filePath(getPathToFile("BSA1.db").toFile())
                 .openOrCreate("test1", "test1");
 
         angajatRepository = database.getRepository(Angajat.class);

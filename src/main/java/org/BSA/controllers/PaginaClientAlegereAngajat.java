@@ -20,7 +20,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class PaginaClientAlegereAngajat implements Initializable{
-   ObservableList list = FXCollections.observableArrayList();
+    ObservableList list = FXCollections.observableArrayList();
 
     @FXML
     private ChoiceBox<String> Angajat;
@@ -77,7 +77,7 @@ public class PaginaClientAlegereAngajat implements Initializable{
     }
 
     private void loadData() {
-       list.removeAll(list);
+        list.removeAll(list);
         String a = "Ionescu Claudiu-tuns";
         String b = "Antonescu Maria-vopsit";
         String c = "Para Georgiana-tuns";
@@ -100,50 +100,50 @@ public class PaginaClientAlegereAngajat implements Initializable{
             screen.setText("Selectati un angajat!");
 
         } else
-            if(angajat=="Ionescu Claudiu-tuns"){
-           screen.setText("Ati selectat Ionescu Claudiu pentru tuns. Programarea are loc la ora 12:00.");
-                screen1.setText("Pentru mai multe detalii sunati la : 0722136458.");
-            }
-            else
-                if(angajat=="Antonescu Maria-vopsit"){
-                    screen.setText("Ati selectat Antonescu Maria pentru vopsit. Programarea are loc la ora 14:00.");
-                    screen1.setText("Pentru mai multe detalii sunati la : 0722136460.");
-                }
-                else
-                if(angajat=="Para Georgiana-tuns"){
-                    screen.setText("Ati selectat Para Georgiana pentru tuns. Programarea are loc la ora 14:00.");
-                    screen1.setText(" Pentru mai multe detalii sunati la : 0722136462.");
-                }
-                else
-                if(angajat=="Tomescu Lara-gene"){
-                    screen.setText("Ati selectat Tomescu Lara pentru gene. Programarea are loc la ora 16:00.");
-                    screen1.setText("Pentru mai multe detalii sunati la : 0722136464.");
-                }
-                else
-                if(angajat=="Voicu Andra-makeup"){
-                    screen.setText("Ati selectat Voicu Andra pentru makeup. Programarea are loc la ora 18:00.");
-                    screen1.setText("Pentru mai multe detalii sunati la : 0722136470.");
-                }
-                else
-                if(angajat=="Mihalache Sara-makeup"){
-                    screen.setText("Ati selectat Mihalache Sara pentru makeup. Programarea are loc la ora 10:00.");
-                    screen1.setText("Pentru mai multe detalii sunati la : 0722136484.");
-                }
-                else
-                if(angajat=="Tarasinca Camelia-manichiura"){
-                    screen.setText("Ati selectat Tarasinca Camelia pentru manichiura. Programarea are loc la ora 09:00.");
-                    screen1.setText("Pentru mai multe detalii sunati la : 0722136490.");
-                }
-                else
-                if(angajat=="Georgescu Roxana-pedichiura"){
-                    screen.setText("Ati selectat Georgescu Roxana pentru pedichiura. Programarea are loc la ora 11:00.");
-                    screen1.setText("Pentru mai multe detalii sunati la : 0722136410.");
-                }
-                else
-                if(angajat=="Popovici Alina-tratamente faciale"){
-                    screen.setText("Ati selectat Popovici Alina pentru tratamente faciale. Programarea are loc la ora 13:00");
-                    screen1.setText("Pentru mai multe detalii sunati la : 0722136400.");
-                }
+        if(angajat=="Ionescu Claudiu-tuns"){
+            screen.setText("Ati selectat Ionescu Claudiu pentru tuns. Programarea are loc la ora 12:00.");
+            screen1.setText("Pentru mai multe detalii sunati la : 0722136458.");
+        }
+        else
+        if(angajat=="Antonescu Maria-vopsit"){
+            screen.setText("Ati selectat Antonescu Maria pentru vopsit. Programarea are loc la ora 14:00.");
+            screen1.setText("Pentru mai multe detalii sunati la : 0722136460.");
+        }
+        else
+        if(angajat=="Para Georgiana-tuns"){
+            screen.setText("Ati selectat Para Georgiana pentru tuns. Programarea are loc la ora 14:00.");
+            screen1.setText(" Pentru mai multe detalii sunati la : 0722136462.");
+        }
+        else
+        if(angajat=="Tomescu Lara-gene"){
+            screen.setText("Ati selectat Tomescu Lara pentru gene. Programarea are loc la ora 16:00.");
+            screen1.setText("Pentru mai multe detalii sunati la : 0722136464.");
+        }
+        else
+        if(angajat=="Voicu Andra-makeup"){
+            screen.setText("Ati selectat Voicu Andra pentru makeup. Programarea are loc la ora 18:00.");
+            screen1.setText("Pentru mai multe detalii sunati la : 0722136470.");
+        }
+        else
+        if(angajat=="Mihalache Sara-makeup"){
+            screen.setText("Ati selectat Mihalache Sara pentru makeup. Programarea are loc la ora 10:00.");
+            screen1.setText("Pentru mai multe detalii sunati la : 0722136484.");
+        }
+        else
+        if(angajat=="Tarasinca Camelia-manichiura"){
+            screen.setText("Ati selectat Tarasinca Camelia pentru manichiura. Programarea are loc la ora 09:00.");
+            screen1.setText("Pentru mai multe detalii sunati la : 0722136490.");
+        }
+        else
+        if(angajat=="Georgescu Roxana-pedichiura"){
+            screen.setText("Ati selectat Georgescu Roxana pentru pedichiura. Programarea are loc la ora 11:00.");
+            screen1.setText("Pentru mai multe detalii sunati la : 0722136410.");
+        }
+        else
+        if(angajat=="Popovici Alina-tratamente faciale"){
+            screen.setText("Ati selectat Popovici Alina pentru tratamente faciale. Programarea are loc la ora 13:00");
+            screen1.setText("Pentru mai multe detalii sunati la : 0722136400.");
+        }
 
     }
 }
