@@ -18,7 +18,7 @@ public class PaginaClient {
     @FXML
     private Button butonCreareCont;
     @FXML
-    private Button butonAngajati;
+    private Button butonAlegereAngajat;
     @FXML
     private Button butonDeconectare;
     @FXML
@@ -47,10 +47,10 @@ public class PaginaClient {
             System.out.println("eroare");
         }
     }
-    public void handleAngajati() throws IOException {
+    public void handleAlegereAngajat() throws IOException {
         try {
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("listaAngajati.fxml"));
-            Stage stage = (Stage) (butonAngajati.getScene().getWindow());
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("clientAlegereAngajat.fxml"));
+            Stage stage = (Stage) (butonAlegereAngajat.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
         }
@@ -63,7 +63,7 @@ public class PaginaClient {
     public void handleVizualizareListaServiciiSiPreturi() throws IOException {
         try {
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("listaserviciisipreturi.fxml"));
-            Stage stage = (Stage) (butonAngajati.getScene().getWindow());
+            Stage stage = (Stage) (butonAlegereAngajat.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
         }
@@ -76,7 +76,7 @@ public class PaginaClient {
     public void handleAlegereOptiuneDorita() throws IOException {
         try {
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("clientAlegereOptiune.fxml"));
-            Stage stage = (Stage) (butonAngajati.getScene().getWindow());
+            Stage stage = (Stage) (butonAlegereAngajat.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
         }
