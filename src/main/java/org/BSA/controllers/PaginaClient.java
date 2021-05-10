@@ -25,6 +25,10 @@ public class PaginaClient {
     private Button butonVizualizareListaServiciiSiPreturi;
     @FXML
     private Button AlegereOptiuneDorita;
+    @FXML
+    private Button buttonCreate;
+    @FXML
+    private Text registrationMessage;
 
     @FXML
     private User user;
@@ -96,6 +100,18 @@ public class PaginaClient {
         catch (IOException e)
         {
             System.out.println("eroare");
+        }
+    }
+    @FXML
+    public void handleRegisterAction() throws Exception{
+        try{
+            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
+            Stage stage = (Stage) (buttonCreate.getScene().getWindow());
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch(IOException e){
+            registrationMessage.setText("eroare!");
         }
     }
 }
