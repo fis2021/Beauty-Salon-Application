@@ -28,6 +28,11 @@ public class PaginaManager {
     private Button butonDeconectare;
     @FXML
     private User user;
+    @FXML
+    private Button buttonCreate;
+    @FXML
+    private Text registrationMessage;
+
 
 
     private  String userName;
@@ -94,6 +99,18 @@ public class PaginaManager {
         catch (IOException e)
         {
             System.out.println("eroare");
+        }
+    }
+    @FXML
+    public void handleRegisterAction() throws Exception{
+        try{
+            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
+            Stage stage = (Stage) (buttonCreate.getScene().getWindow());
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch(IOException e){
+            registrationMessage.setText("eroare!");
         }
     }
 }
