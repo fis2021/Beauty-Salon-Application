@@ -75,6 +75,7 @@ public class Login {
             registrationMessage.setText("eroare!");
         }
     }
+
     public String getUsername(){
         return usernameField.getText();
     }
