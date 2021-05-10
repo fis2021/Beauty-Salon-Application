@@ -45,6 +45,11 @@
       <Text fx:id="Mesaj" layoutX="375.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="206.8033447265625" />
       <Text fx:id="Mesaj" layoutX="364.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="213.28717041015625" />
       <Text fx:id="Mesaj" layoutX="373.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.28717041015625" />
+      <Button fx:id="ButonInapoi" layoutY="406.0" onAction="#handleInapoiAction" prefHeight="84.0" prefWidth="601.0" style="-fx-background-color: WHITE; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Inapoi">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="24.0" />
+         </font>
+      </Button>
       <ImageView fitHeight="329.0" fitWidth="354.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/beautysalon.png" />
