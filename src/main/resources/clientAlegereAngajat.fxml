@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="500" prefWidth="600" style="-fx-background-color: BISQUE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.BSA.controllers.PaginaClientAlegereAngajat">
-    <TilePane alignment="CENTER" layoutX="160.0" prefHeight="171.0" prefWidth="449.0" style="-fx-background-color: WHITE; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" GridPane.rowIndex="0">
-        <Text id="title-text" text="Alegeti angajatul:" textAlignment="CENTER"><font>
+<AnchorPane prefHeight="500" prefWidth="600" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.BSA.controllers.PaginaClientAlegereAngajat">
+    <TilePane alignment="CENTER" prefHeight="110.0" prefWidth="630.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" GridPane.rowIndex="0">
+        <Text id="title-text" text="Alegeti angajatul:" textAlignment="CENTER" wrappingWidth="218.42346239089966"><font>
             <Font name="Book Antiqua Bold Italic" size="24.0" />
         </font></Text>
         <effect>
@@ -22,36 +28,39 @@
         </effect>
     </TilePane>
     <HBox alignment="bottom_right" spacing="70" GridPane.rowIndex="50" />
-   <ImageView fitHeight="171.0" fitWidth="204.0" layoutX="-9.0" pickOnBounds="true" preserveRatio="true">
-      <image>
-         <Image url="@Image/beautysalon.png" />
-      </image>
-   </ImageView>
-   <Line endX="438.99993896484375" endY="0.20001220703125" layoutX="169.0" layoutY="171.0" startX="-168.99998474121094" strokeWidth="4.0" />
-   <Line endX="602.9999389648438" endY="8.77380352903856E-6" startX="-9.15527380129788E-6" startY="3.43322744811303E-6" strokeWidth="8.0" />
-   <Line endX="291.5999755859375" endY="-131.79998779296875" layoutX="318.0" layoutY="303.0" startX="291.5999755859375" startY="-303.0" strokeWidth="5.0" />
-   <Line endX="100.0" startX="-100.0" />
-   <Line endX="-86.00001525878906" endY="-38.0" layoutX="86.0" layoutY="209.0" startX="-86.00001525878906" startY="-208.5" strokeWidth="8.0" />
 
     <HBox alignment="CENTER" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-     <Button fx:id="ButonInapoi" layoutX="10.0" layoutY="461.0" onAction="#handleInapoiAction" prefHeight="29.0" prefWidth="144.0" style="-fx-background-color: BURLYWOOD; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Inapoi">
+     <Button fx:id="ButonInapoi" layoutX="-1.0" layoutY="443.0" onAction="#handleInapoiAction" prefHeight="70.0" prefWidth="329.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Inapoi la pagina de client">
       <font>
-         <Font name="System Bold" size="11.0" />
+         <Font name="Book Antiqua Bold Italic" size="17.0" />
      </font>
    </Button>
-   <VBox layoutX="50.0" layoutY="196.0" prefHeight="229.0" prefWidth="411.0">
+   <VBox layoutY="113.0" prefHeight="83.0" prefWidth="254.0">
       <children>
-         <ChoiceBox fx:id="Angajat" prefHeight="41.0" prefWidth="280.0" />
-         <Text fx:id="screen" wrappingWidth="268.40002059936523" />
-         <Text fx:id="screen1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="196.7367706298828" />
+         <Text fx:id="screen" wrappingWidth="280.40002059936523" />
+         <ImageView fitHeight="188.0" fitWidth="241.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Image/beautysalon.png" />
+            </image>
+         </ImageView>
       </children>
    </VBox>
-    <Button fx:id="buttonAlegereAngajat" layoutX="514.0" layoutY="456.0" onAction="#displayValue" style="-fx-background-color: BURLYWOOD; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Selectare">
+    <Button fx:id="buttonAlegereAngajat" layoutX="312.0" layoutY="443.0" onAction="#displayValue" prefHeight="70.0" prefWidth="317.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Selectare">
 
                   <font>
-         <Font name="System Bold" size="12.0" />
+         <Font name="Book Antiqua Bold Italic" size="17.0" />
      </font>
    </Button>
+   <Text layoutX="379.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alegeti ora:" wrappingWidth="132.5367431640625">
+      <font>
+         <Font name="Book Antiqua Bold Italic" size="18.0" />
+      </font>
+   </Text>
+   <ChoiceBox fx:id="Ora" layoutX="311.0" layoutY="280.0" prefHeight="35.0" prefWidth="299.0" />
+   <Text fx:id="screen1" layoutX="396.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="196.7367706298828" />
+   <ChoiceBox fx:id="Angajat" layoutX="311.0" layoutY="131.0" prefHeight="53.0" prefWidth="299.0" />
+   <Text fx:id="detalii" layoutX="311.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="299.20000000000005" />
+   <Text fx:id="mesaj" layoutX="329.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="208.1700439453125" />
    
 
 </AnchorPane>
