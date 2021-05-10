@@ -1,6 +1,5 @@
 package org.BSA.controllers;
 
-import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -9,23 +8,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import org.BSA.model.Angajat;
 import org.BSA.model.ServiciiPreturi;
 import org.BSA.model.User;
-import org.BSA.services.AngajatService;
-import org.BSA.services.UserService;
-import org.dizitart.no2.objects.ObjectRepository;
 
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 

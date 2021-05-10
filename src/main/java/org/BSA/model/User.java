@@ -12,6 +12,8 @@ public class User {
     private String prenume;
     private String email;
     private String optiune;
+    private String angajat;
+    private String ora;
 
     public User(String username, String password, String role, String telefon,String nume,String prenume,String email) {
         this.username = username;
@@ -22,6 +24,8 @@ public class User {
         this.prenume=prenume;
         this.email=email;
         this.optiune="";
+        this.angajat="";
+        this.ora="";
     }
 
     public User() {
@@ -78,6 +82,22 @@ public class User {
 
     public String getOptiune() {
         return optiune;
+    }
+
+    public String getAngajat() {
+        return angajat;
+    }
+
+    public void setAngajat(String angajat) {
+        this.angajat = angajat;
+    }
+
+    public String getOra() {
+        return ora;
+    }
+
+    public void setOra(String ora) {
+        this.ora = ora;
     }
 
     @Override
