@@ -129,6 +129,7 @@ public class PaginaClientAlegereAngajat implements Initializable {
             mesaj.setText("Optiunea a fost selectata cu succes!");
             int index = angajat.indexOf("-");
             String numeAngajat = angajat.substring(0, index);
+            System.out.println(numeAngajat);
             UserService.setAngajat(getUserCurrent, numeAngajat);
             UserService.setOra(getUserCurrent, ora);
 

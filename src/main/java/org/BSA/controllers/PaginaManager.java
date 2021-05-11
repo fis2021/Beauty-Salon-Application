@@ -67,7 +67,7 @@ public class PaginaManager {
     }
     public void handleVizualizareListaClientiInAsteptare() throws IOException {
         try {
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("vizualizarelistaclientiinasteptare.fxml"));
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("managerProgAsteptare.fxml"));
             Stage stage = (Stage) (butonVizualizareListaClientiInAsteptare.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
