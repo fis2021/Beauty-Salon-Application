@@ -14,6 +14,7 @@ public class User {
     private String optiune;
     private String angajat;
     private String ora;
+    private int acceptat;
 
     public User(String username, String password, String role, String telefon,String nume,String prenume,String email) {
         this.username = username;
@@ -26,6 +27,15 @@ public class User {
         this.optiune="";
         this.angajat="";
         this.ora="";
+        this.acceptat = 0;
+    }
+
+    public int getAcceptat() {
+        return acceptat;
+    }
+
+    public void setAcceptat(int acceptat) {
+        this.acceptat = acceptat;
     }
 
     public boolean areProgramare(){
