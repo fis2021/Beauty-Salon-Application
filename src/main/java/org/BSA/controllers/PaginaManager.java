@@ -78,16 +78,17 @@ public class PaginaManager {
         }
     }
     public void handleAcceptareRespingereProgramare() throws IOException {
-        try {
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("acceptarerespingereprogramare.fxml"));
+        //try
+        {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("managerProgAcc.fxml"));
             Stage stage = (Stage) (AcceptareRespingereProgramare.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
         }
-        catch (IOException e)
+       /* catch (IOException e)
         {
             System.out.println("eroare");
-        }
+        }*/
     }
     public void handleDeconectare() throws IOException {
         try {

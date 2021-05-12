@@ -108,6 +108,25 @@ public class UserService {
         }
     }
 
+    public static void setUserAcc(String username){
+        for(User user : userRepository.find()){
+            if(Objects.equals(username, user.getUsername())){
+                user.setAcceptat(1);
+                userRepository.update(user);
+            }
+        }
+    }
+
+    public static int getUserAcc(String username){
+        for(User user : userRepository.find()){
+            if(Objects.equals(username, user.getUsername())){
+                return user.getAcceptat();
+            }
+        }
+        return 0;
+    }
+
+
     public static String getOptiune(String username) {
         for (User user : userRepository.find()) {
             if (Objects.equals(username, user.getUsername())) {

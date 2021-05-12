@@ -52,6 +52,10 @@ public class PaginaManagerProgramareAsteptare implements Initializable {
 
     public void selectAction(){
         if(acc.getValue().equals("Acceptare")){
+            String info = infoProg.getValue();
+            int index = info.indexOf(" ");
+            String numeuser = info.substring(0, index);
+            UserService.setUserAcc(numeuser);
             mesaj.setText("Programare acceptata!");
         }
         else if(acc.getValue().equals("Respingere")){
