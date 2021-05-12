@@ -28,6 +28,21 @@ public class User {
         this.ora="";
     }
 
+    public boolean areProgramare(){
+        if(!this.ora.equals("") && !this.angajat.equals("") && !this.optiune.equals("")){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean esteClient(){
+        if(this.role.equals("Client")){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     public User() {
     }
 

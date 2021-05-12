@@ -14,7 +14,7 @@ import static org.BSA.services.FileSystemService.getPathToFile;
 
 public class UserService {
 
-    private static ObjectRepository<User> userRepository;
+    public static ObjectRepository<User> userRepository;
 
     public static void initDatabase() {
         Nitrite database = Nitrite.builder()
@@ -22,6 +22,19 @@ public class UserService {
                 .openOrCreate("test", "test");
 
         userRepository = database.getRepository(User.class);
+    }
+
+    public static boolean utilizatorAreProgramare(){
+        for (User user : userRepository.find()){
+                if(user.areProgramare() && user.esteClient()){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+
+        return false;
     }
 
     public static User login(String username, String password) throws UsernameDoesNotExists {
