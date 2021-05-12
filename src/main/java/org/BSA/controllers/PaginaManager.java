@@ -55,7 +55,7 @@ public class PaginaManager {
 
     public void handleAdaugareServiciiSiPreturi() throws IOException {
         try {
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adaugareserviciisipreturi.fxml"));
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("managerEditareServiciiPreturi.fxml"));
             Stage stage = (Stage) (butonAdaugareServiciiSiPreturi.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
