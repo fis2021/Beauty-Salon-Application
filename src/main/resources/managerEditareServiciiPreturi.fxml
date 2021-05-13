@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.BSA.controllers.PaginaManagerEditareServiciiPreturi">
+    <children>
+        <TableView fx:id="table" layoutX="51.0" layoutY="185.0" prefHeight="386.0" prefWidth="918.0" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="185.0">
+            <columns>
+                <TableColumn fx:id="id" prefWidth="52.00000077486038" text="ID" />
+                <TableColumn fx:id="servicii" prefWidth="187.19997787475586" text="SERVICII" />
+                <TableColumn fx:id="preturi" prefWidth="432.8000030517578" text="PRETURI" />
+                <TableColumn fx:id="editare" prefWidth="212.7999267578125" text="EDITARE" />
+            </columns>
+        </TableView>
+        <Button fx:id="inapoi" layoutY="534.0" onAction="#handleInapoiAction" prefHeight="108.0" prefWidth="888.0" style="-fx-background-color: git; -fx-border-style: inset;  -fx-background-color: GAINSBORO;  -fx-border-style: outset; -fx-border-color: BLACK ;" text="Inapoi la pagina de manager"><font>
+            <Font name="Book Antiqua Bold Italic" size="24.0" />
+        </font></Button>
+        <TextArea focusTraversable="false" layoutX="200.0" prefHeight="186.0" prefWidth="688.0" text="&#10;               Servicii si Preturi">
+            <font>
+                <Font name="Book Antiqua Bold Italic" size="24.0" />
+            </font>
+        </TextArea>
+        <ImageView fitHeight="185.0" fitWidth="208.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Image/beautysalon.png" />
+            </image>
+        </ImageView>
+      <TextArea focusTraversable="false" layoutX="210.0" layoutY="-1.0" prefHeight="186.0" prefWidth="678.0" text="&#10;           &#10;                      Editare Servicii Si Preturi&#10;&#10;">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="26.0" />
+         </font>
+      </TextArea>
+    </children>
+
+</AnchorPane>
