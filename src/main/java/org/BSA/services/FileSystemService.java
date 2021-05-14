@@ -15,15 +15,16 @@ public class FileSystemService {
 
     public static Path getPathToFile(String... path) {
 
-        return getApplicationHomeFolder().resolve(Paths.get(".", path));
+     return Paths.get(USER_FOLDER,APPLICATION_FOLDER).resolve(Paths.get("." , path));
+        //return getApplicationHomeFolder().resolve(Paths.get(".", path));
     }
 
     public static Path getApplicationHomeFolder() {
         return Paths.get(USER_FOLDER,APPLICATION_FOLDER);
 }
 
-     static void initDirectory() {
-        Path applicationHomePath = getApplicationHomeFolder();
+    public static void initDirectory() {
+        Path applicationHomePath = FileSystemService.getApplicationHomeFolder();
         if (!Files.exists(applicationHomePath))
             applicationHomePath.toFile().mkdirs();
     }

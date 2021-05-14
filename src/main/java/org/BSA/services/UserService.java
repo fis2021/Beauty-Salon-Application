@@ -17,10 +17,10 @@ import static org.BSA.services.FileSystemService.getPathToFile;
 public class UserService {
 
     public static ObjectRepository<User> userRepository;
-
+    public static Nitrite database;
     public static void initDatabase()  {
         FileSystemService.initDirectory();
-        Nitrite database = Nitrite.builder()
+        database = Nitrite.builder()
                 .filePath(getPathToFile("BSA.db").toFile())
                 .openOrCreate("test", "test");
 
@@ -78,7 +78,8 @@ public class UserService {
     return userRepository.find().toList();
     }
 
-    private static String encodePassword(String salt, String password) {
+
+    public static String encodePassword(String salt, String password) {
         MessageDigest md = getMessageDigest();
         md.update(salt.getBytes(StandardCharsets.UTF_8));
 
