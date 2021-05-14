@@ -62,7 +62,7 @@ public class  PaginaManagerEditareServiciiPreturi implements Initializable{
            new EditareServiciiPreturi("5","Semi-60 LEI, Gel-100 LEI, Clasica-30 LEI", "Manichiura", new Button("update")),
            new EditareServiciiPreturi("6","Semi-60 LEI, Gel-100 LEI, Clasica-30 LEI", "Pedichiura", new Button("update")),
            new EditareServiciiPreturi("7","Dermabraziune-250 LEI, Peeling-300 LEI, Mezoterapie-200 LEI", "Tratamente Faciale", new Button("update")),
-           new EditareServiciiPreturi("7","Dermabraziune-250 LEI, Peeling-300 LEI, Mezoterapie-200 LEI", "Tratamente Faciale", new Button("update")),
+           new EditareServiciiPreturi("","", "", new Button("update")),
            new EditareServiciiPreturi("","", "", new Button("update")),
            new EditareServiciiPreturi("","", "", new Button("update"))
 
@@ -109,7 +109,7 @@ public class  PaginaManagerEditareServiciiPreturi implements Initializable{
 
     private void loadData(){
         editareserviciipreturi= FXCollections.observableArrayList();
-        for(int i=1; i<=9; i++){
+        for(int i=0; i<6; i++){
            editareserviciipreturi.add(new EditareServiciiPreturi(String.valueOf(i), "preturi " + i, "servicii " + i, new Button("update")));
         }
         table.setItems(editareserviciipreturi);
