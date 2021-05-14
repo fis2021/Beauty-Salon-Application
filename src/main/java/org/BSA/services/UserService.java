@@ -5,9 +5,11 @@ import org.dizitart.no2.objects.ObjectRepository;
 import org.BSA.exceptions.UsernameDoesNotExists;
 import org.BSA.model.User;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 import java.util.Objects;
 
 import static org.BSA.services.FileSystemService.getPathToFile;
@@ -16,7 +18,8 @@ public class UserService {
 
     public static ObjectRepository<User> userRepository;
 
-    public static void initDatabase() {
+    public static void initDatabase()  {
+        FileSystemService.initDirectory();
         Nitrite database = Nitrite.builder()
                 .filePath(getPathToFile("BSA.db").toFile())
                 .openOrCreate("test", "test");
@@ -71,6 +74,9 @@ public class UserService {
         }
     }
 
+    public static List<User> getAllUsers(){
+    return userRepository.find().toList();
+    }
 
     private static String encodePassword(String salt, String password) {
         MessageDigest md = getMessageDigest();
