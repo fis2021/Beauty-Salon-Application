@@ -110,6 +110,14 @@ class UserServiceTest {
         assertThat(user.getOptiune()).isEqualTo("Makeup");
     }
 
+    @Test
+    @DisplayName("Verifica daca utilizatorul exista")
+    void testcheckUsernameAlreadyExists() throws UsernameAlreadyExistsException{
+       UserService.addUser("denim", "deni" , "Client" , "0766532333", "Manta", "Denisa", "denim@yahoo.com");
+       assertThrows(UsernameAlreadyExistsException.class, () -> {
+           UserService.checkUserDoesNotAlreadyExist("denim");
+       });
 
+    }
 
 }
