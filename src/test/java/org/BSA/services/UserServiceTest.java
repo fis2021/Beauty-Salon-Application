@@ -72,6 +72,20 @@ class UserServiceTest {
         assertThat(user.getNume()).isEqualTo("Manta");
         assertThat(user.getPrenume()).isEqualTo("Denisa");
         assertThat(user.getEmail()).isEqualTo("denim@yahoo.com");
+
+        UserService.addUser("iuliam" , "iuli" , "Manager", "0766111166" , "Mircioaga", "Iulia", "iuliam@yahoo.com");
+        assertThat(UserService.getAllUsers()).isNotEmpty();
+        assertThat(UserService.getAllUsers()).size().isEqualTo(2);
+        User user1 = UserService.getAllUsers().get(1);
+        assertThat(user1).isNotNull();
+        assertThat(user1.getUsername()).isEqualTo("iuliam");
+        assertThat(user1.getPassword()).isEqualTo(UserService.encodePassword("iuliam","iuli"));
+        assertThat(user1.getRole()).isEqualTo("Manager");
+        assertThat(user1.getTelefon()).isEqualTo("0766111166");
+        assertThat(user1.getNume()).isEqualTo("Mircioaga");
+        assertThat(user1.getPrenume()).isEqualTo("Iulia");
+        assertThat(user1.getEmail()).isEqualTo("iuliam@yahoo.com");
+
     }
 
     @Test
