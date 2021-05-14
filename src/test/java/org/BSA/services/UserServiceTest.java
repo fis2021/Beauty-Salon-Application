@@ -3,6 +3,7 @@ package org.BSA.services;
 
 
 import org.BSA.exceptions.UsernameAlreadyExistsException;
+import org.BSA.exceptions.UsernameDoesNotExists;
 import org.BSA.model.User;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.*;
@@ -96,5 +97,19 @@ class UserServiceTest {
             UserService.addUser("denim", "deni" , "Client" , "0766532333", "Manta", "Denisa", "denim@yahoo.com");
         });
     }
+
+    @Test
+    @DisplayName("Verifica daca se adauga o optiune")
+    void testAdaugareOptiune() throws Exception{
+        UserService.addUser("denim", "deni" , "Client" , "0766532333", "Manta", "Denisa", "denim@yahoo.com");
+        UserService.adaugareOptiune("denim","Makeup");
+        assertThat(UserService.getAllUsers()).isNotEmpty();
+        assertThat(UserService.getAllUsers()).size().isEqualTo(1);
+        User user=UserService.getAllUsers().get(0);
+        assertThat(user).isNotNull();
+        assertThat(user.getOptiune()).isEqualTo("Makeup");
+    }
+
+
 
 }
