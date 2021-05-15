@@ -50,10 +50,10 @@ class PaginaClientAlegereOptiuneTest {
     }
     @Test
     void testPaginaClientAlegereOptiune(FxRobot robot) throws UsernameAlreadyExistsException  {
-
-            UserService.addUser("denim" , "deni" , "Client", "0766532333" , "Manta", "Denisa", "denim@yahoo.com");
-            robot.clickOn("#makeup");
-            robot.clickOn("#inapoi2");
+        Login.setGetUserCurrent("denim");
+        UserService.addUser("denim" , "deni" , "Client", "0766532333" , "Manta", "Denisa", "denim@yahoo.com");
+        robot.clickOn("#makeup");
+        robot.clickOn("#inapoi2");
 
 
 
