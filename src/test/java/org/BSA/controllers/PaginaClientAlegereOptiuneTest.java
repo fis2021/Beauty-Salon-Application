@@ -45,11 +45,17 @@ class PaginaClientAlegereOptiuneTest {
 
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("clientAlegereOptiune.fxml"));
         primaryStage.setTitle("BEAUTY SALON");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root, 599, 490));
         primaryStage.show();
     }
     @Test
-    void testPaginaClientAlegereOptiune(FxRobot robot) {
+    void testPaginaClientAlegereOptiune(FxRobot robot) throws UsernameAlreadyExistsException  {
+
+            UserService.addUser("denim" , "deni" , "Client", "0766532333" , "Manta", "Denisa", "denim@yahoo.com");
+            robot.clickOn("#makeup");
+            robot.clickOn("#inapoi2");
+
+
 
     }
 }
