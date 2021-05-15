@@ -37,7 +37,7 @@
          <Image url="@Image/beautysalon.png" />
       </image>
    </ImageView>
-     <Button fx:id="butonDeconectare" layoutX="410.0" layoutY="330.0" onAction="#handleDeconectare" prefHeight="40.0" prefWidth="173.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Deconectare">
+     <Button fx:id="butonDeconectare"  id="deconectare" layoutX="410.0" layoutY="330.0" onAction="#handleDeconectare" prefHeight="40.0" prefWidth="173.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Deconectare">
       <font>
          <Font name="Book Antiqua Bold Italic" size="12.0" />
      </font>

@@ -30,7 +30,7 @@
             <Font name="System Bold" size="12.0" />
         </font>
     </Label>
-    <TextField fx:id="usernameField" alignment="TOP_LEFT" prefHeight="26.0" prefWidth="141.0" GridPane.columnIndex="2" GridPane.rowIndex="9">
+    <TextField fx:id="usernameField"  id="username" alignment="TOP_LEFT" prefHeight="26.0" prefWidth="141.0" GridPane.columnIndex="2" GridPane.rowIndex="9">
         <font>
             <Font name="System Bold" size="12.0" />
         </font>
@@ -43,12 +43,12 @@
             <Font name="System Bold" size="12.0" />
         </font>
     </Label>
-    <PasswordField fx:id="passwordField" GridPane.columnIndex="2" GridPane.rowIndex="10">
+    <PasswordField fx:id="passwordField" id="password" GridPane.columnIndex="2" GridPane.rowIndex="10">
         <font>
             <Font name="System Bold" size="12.0" />
         </font>
     </PasswordField>
-    <Text fx:id="registrationMessage" GridPane.columnIndex="2" GridPane.rowIndex="11">
+    <Text fx:id="registrationMessage" id="registrationMessage" GridPane.columnIndex="2" GridPane.rowIndex="11">
         <font>
             <Font name="System Bold" size="12.0" />
         </font>
@@ -63,7 +63,7 @@
         </children>
     </HBox>
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="12">
-        <Button fx:id="buttonLogin" onAction="#handleLoginAction" prefHeight="26.0" prefWidth="169.0" text="Autentificare"><font>
+        <Button fx:id="buttonLogin" id="buttonLogin" onAction="#handleLoginAction" prefHeight="26.0" prefWidth="169.0" text="Autentificare"><font>
             <Font name="System Bold" size="12.0" />
         </font></Button>
     </HBox>
