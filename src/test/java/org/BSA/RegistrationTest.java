@@ -44,7 +44,7 @@ class RegistrationTest {
 
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
         primaryStage.setTitle("BEAUTY SALON");
-        primaryStage.setScene(new Scene(root, 400, 600));
+        primaryStage.setScene(new Scene(root, 450, 700));
         primaryStage.show();
     }
 
