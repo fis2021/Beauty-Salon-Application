@@ -45,7 +45,7 @@
          </ImageView>
       </children>
    </VBox>
-    <Button fx:id="buttonAlegereAngajat" layoutX="312.0" layoutY="443.0" onAction="#displayValue" prefHeight="70.0" prefWidth="317.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Selectare">
+    <Button fx:id="buttonAlegereAngajat" id="selectare" layoutX="312.0" layoutY="443.0" onAction="#displayValue" prefHeight="70.0" prefWidth="317.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Selectare">
 
                   <font>
          <Font name="Book Antiqua Bold Italic" size="17.0" />
@@ -56,11 +56,11 @@
          <Font name="Book Antiqua Bold Italic" size="18.0" />
       </font>
    </Text>
-   <ChoiceBox fx:id="Ora" layoutX="311.0" layoutY="280.0" prefHeight="35.0" prefWidth="299.0" />
+   <ChoiceBox fx:id="Ora" id="ora" layoutX="311.0" layoutY="280.0" prefHeight="35.0" prefWidth="299.0" />
    <Text fx:id="screen1" layoutX="396.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="196.7367706298828" />
-   <ChoiceBox fx:id="Angajat" layoutX="311.0" layoutY="131.0" prefHeight="53.0" prefWidth="299.0" />
-   <Text fx:id="detalii" layoutX="311.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="299.20000000000005" />
-   <Text fx:id="mesaj" layoutX="329.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="208.1700439453125" />
+   <ChoiceBox fx:id="Angajat" id="angajat" layoutX="311.0" layoutY="131.0" prefHeight="53.0" prefWidth="299.0" />
+   <Text fx:id="detalii"  layoutX="311.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="299.20000000000005" />
+   <Text fx:id="mesaj"  layoutX="329.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="208.1700439453125" />
    
 
 </AnchorPane>
