@@ -87,6 +87,42 @@ class RegistrationTest {
         robot.clickOn("#registerButton");
         assertThat(robot.lookup("#registrationMessage").queryText()).hasText(String.format("Exista deja un cont cu numele de utilizator %s !", "denim"));
 
+        robot.clickOn("#backButton");
+        robot.clickOn("#registrationButton");
+        robot.clickOn("#nume");
+        robot.write("Mircioaga");
+        robot.clickOn("#prenume");
+        robot.write("Iulia");
+        robot.clickOn("#username");
+        robot.write("iulim");
+        robot.clickOn("#password");
+        robot.write("iuli");
+        robot.clickOn("#telefon");
+        robot.write("0766532322");
+        robot.clickOn("#email");
+        robot.write("iulim@yahoo.com");
+        robot.clickOn("#role");
+        robot.clickOn("Manager");
+        robot.clickOn("#registerButton");
+        assertThat(robot.lookup("#registrationMessage").queryText()).hasText("Contul a fost creat cu succes!");
 
+        robot.clickOn("#backButton");
+        robot.clickOn("#registrationButton");
+        robot.clickOn("#nume");
+        robot.write("Mircioaga");
+        robot.clickOn("#prenume");
+        robot.write("Iulia");
+        robot.clickOn("#username");
+        robot.write("iulim");
+        robot.clickOn("#password");
+        robot.write("iuli");
+        robot.clickOn("#telefon");
+        robot.write("0766532322");
+        robot.clickOn("#email");
+        robot.write("iulim@yahoo.com");
+        robot.clickOn("#role");
+        robot.clickOn("Manager");
+        robot.clickOn("#registerButton");
+        assertThat(robot.lookup("#registrationMessage").queryText()).hasText(String.format("Exista deja un cont cu numele de utilizator %s !", "iulim"));
     }
 }
