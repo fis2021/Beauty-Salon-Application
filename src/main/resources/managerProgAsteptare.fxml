@@ -30,7 +30,7 @@
     <HBox alignment="bottom_right" spacing="70" GridPane.rowIndex="50" />
 
     <HBox alignment="CENTER" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-    <Button fx:id="inapoi" layoutX="-1.0" layoutY="443.0" onAction="#handleInapoiAction" prefHeight="70.0" prefWidth="329.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Inapoi la pagina de manager">
+    <Button fx:id="inapoi" id="inapoi1" layoutX="-1.0" layoutY="443.0" onAction="#handleInapoiAction" prefHeight="70.0" prefWidth="329.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Inapoi la pagina de manager">
         <font>
             <Font name="Book Antiqua Bold Italic" size="17.0" />
         </font>

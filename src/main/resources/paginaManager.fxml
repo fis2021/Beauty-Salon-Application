@@ -40,24 +40,24 @@
     <Accordion />
     <FlowPane layoutX="15.0" layoutY="529.0" prefHeight="50.0" prefWidth="278.0">
       <children>
-           <Button fx:id="buttonCreate" onAction="#handleRegisterAction" prefHeight="42.0" prefWidth="188.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Creare cont nou">
+           <Button fx:id="buttonCreate" id="butonContNou" onAction="#handleRegisterAction" prefHeight="42.0" prefWidth="188.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Creare cont nou">
             <font>
                <Font name="Book Antiqua Bold Italic" size="14.0" />
            </font>
            </Button>
       </children></FlowPane>
     <HBox layoutX="23.0" layoutY="201.0" prefHeight="49.0" prefWidth="65.0" />
-     <Button fx:id="butonDeconectare" layoutX="383.0" layoutY="525.0" onAction="#handleDeconectare" prefHeight="40" prefWidth="211.0" style="-fx-background-color:GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Deconectare">
+     <Button fx:id="butonDeconectare" id="deconectare" layoutX="383.0" layoutY="525.0" onAction="#handleDeconectare" prefHeight="40" prefWidth="211.0" style="-fx-background-color:GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Deconectare">
       <font>
          <Font name="Book Antiqua Bold Italic" size="14.0" />
      </font>
    </Button>
-     <Button fx:id="AcceptareRespingereProgramare" layoutX="315.0" layoutY="270.0" onAction="#handleAcceptareRespingereProgramare" prefHeight="40.0" prefWidth="278.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Vizualizare lista programari acceptate">
+     <Button fx:id="AcceptareRespingereProgramare" id="AcceptareRespingereProgramare" layoutX="315.0" layoutY="270.0" onAction="#handleAcceptareRespingereProgramare" prefHeight="40.0" prefWidth="278.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Vizualizare lista programari acceptate">
       <font>
          <Font name="Book Antiqua Bold Italic" size="14.0" />
      </font>
    </Button>
-     <Button fx:id="butonAdaugareServiciiSiPreturi" layoutX="315.0" layoutY="372.0" onAction="#handleAdaugareServiciiSiPreturi" prefHeight="40.0" prefWidth="278.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Editare lista servicii si preturi">
+     <Button fx:id="butonAdaugareServiciiSiPreturi" id="AdaugareServiciiSiPreturi" layoutX="315.0" layoutY="372.0" onAction="#handleAdaugareServiciiSiPreturi" prefHeight="40.0" prefWidth="278.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Editare lista servicii si preturi">
       <font>
          <Font name="Book Antiqua Bold Italic" size="14.0" />
      </font>
@@ -67,7 +67,7 @@
          <Image url="@Image/beautysalon.png" />
       </image>
    </ImageView>
-     <Button fx:id="butonVizualizareListaClientiInAsteptare" layoutX="315.0" layoutY="174.0" onAction="#handleVizualizareListaClientiInAsteptare" prefHeight="40.0" prefWidth="278.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Vizualizare lista clienti in asteptare">
+     <Button fx:id="butonVizualizareListaClientiInAsteptare" id="VizualizareListaClientiInAsteptare" layoutX="315.0" layoutY="174.0" onAction="#handleVizualizareListaClientiInAsteptare" prefHeight="40.0" prefWidth="278.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Vizualizare lista clienti in asteptare">
       <font>
          <Font name="Book Antiqua Bold Italic" size="14.0" />
      </font>

@@ -19,7 +19,7 @@
                 <TableColumn fx:id="editare" prefWidth="212.7999267578125" text="EDITARE" />
             </columns>
         </TableView>
-        <Button fx:id="inapoi" layoutY="534.0" onAction="#handleInapoiAction" prefHeight="108.0" prefWidth="888.0" style="-fx-background-color: git; -fx-border-style: inset;  -fx-background-color: GAINSBORO;  -fx-border-style: outset; -fx-border-color: BLACK ;" text="Inapoi la pagina de manager"><font>
+        <Button fx:id="inapoi" id="inapoi3" layoutY="534.0" onAction="#handleInapoiAction" prefHeight="108.0" prefWidth="888.0" style="-fx-background-color: git; -fx-border-style: inset;  -fx-background-color: GAINSBORO;  -fx-border-style: outset; -fx-border-color: BLACK ;" text="Inapoi la pagina de manager"><font>
             <Font name="Book Antiqua Bold Italic" size="24.0" />
         </font></Button>
         <TextArea focusTraversable="false" layoutX="200.0" prefHeight="186.0" prefWidth="688.0" text="&#10;               Servicii si Preturi">
