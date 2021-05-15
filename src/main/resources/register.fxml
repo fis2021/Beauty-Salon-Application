@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane alignment="TOP_CENTER" cache="true" hgap="10" prefHeight="600" prefWidth="800" style="-fx-background-color: GAINSBORO" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.BSA.controllers.RegistrationController">
+<GridPane alignment="TOP_CENTER" cache="true" hgap="10" prefHeight="753.0" prefWidth="815.0" style="-fx-background-color: GAINSBORO" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.BSA.controllers.RegistrationController">
     <padding>
         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
     </padding>
@@ -25,46 +25,46 @@
         </font></Text>
     <Label text="Nume:" GridPane.columnIndex="2" GridPane.rowIndex="5" />
 
-    <TextField fx:id="nume" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+    <TextField id="nume" fx:id="nume" GridPane.columnIndex="3" GridPane.rowIndex="5" />
 
     <Label text="Prenume:" GridPane.columnIndex="2" GridPane.rowIndex="6" />
 
-    <TextField fx:id="prenume" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+    <TextField id="prenume" fx:id="prenume" GridPane.columnIndex="3" GridPane.rowIndex="6" />
 
     <Label text="Username:" GridPane.columnIndex="2" GridPane.rowIndex="8" />
 
-    <TextField fx:id="usernameField" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+    <TextField id="username" fx:id="usernameField" GridPane.columnIndex="3" GridPane.rowIndex="8" />
 
     <Label text="Password:" GridPane.columnIndex="2" GridPane.rowIndex="9" />
 
-    <PasswordField fx:id="passwordField" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+    <PasswordField id="password" fx:id="passwordField" GridPane.columnIndex="3" GridPane.rowIndex="9" />
 
     <Label text="Telefon:" GridPane.columnIndex="2" GridPane.rowIndex="10" />
 
-    <TextField fx:id="telefon" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+    <TextField id="telefon" fx:id="telefon" GridPane.columnIndex="3" GridPane.rowIndex="10" />
 
     <Label text="Email:" GridPane.columnIndex="2" GridPane.rowIndex="11" />
 
-    <TextField fx:id="email" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+    <TextField id="email" fx:id="email" GridPane.columnIndex="3" GridPane.rowIndex="11" />
     <Label text="Role:" GridPane.columnIndex="2" GridPane.rowIndex="12" />
 
-    <ChoiceBox fx:id="role" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="12">
+    <ChoiceBox id="role" fx:id="role" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="12">
     </ChoiceBox>
 
 
 
-    <Text fx:id="registrationMessage" GridPane.columnIndex="3" GridPane.rowIndex="14"><font>
+    <Text id="registrationMessage" fx:id="registrationMessage" wrappingWidth="234.66668701171875" GridPane.columnIndex="3" GridPane.rowIndex="14"><font>
         <Font name="System Bold" size="12.0" />
     </font></Text>
 
     <HBox alignment="bottom_right" prefHeight="26.0" prefWidth="199.0" spacing="10" GridPane.columnIndex="3" GridPane.rowIndex="13">
-        <Button fx:id="buttonCreare" onAction="#handleRegisterAction" prefHeight="26.0" prefWidth="164.0" text="Inregistrare"><font>
+        <Button id="registerButton" fx:id="buttonCreare" onAction="#handleRegisterAction" prefHeight="26.0" prefWidth="164.0" text="Inregistrare"><font>
             <Font name="System Bold" size="12.0" />
         </font></Button>
     </HBox>
 
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="13">
-        <Button fx:id="button" onAction="#Backaction" prefHeight="26.0" prefWidth="63.0" text="Inapoi"><font>
+        <Button id="backButton" fx:id="button" onAction="#Backaction" prefHeight="26.0" prefWidth="63.0" text="Inapoi"><font>
             <Font name="System Bold" size="12.0" />
         </font></Button>
 
@@ -78,8 +78,8 @@
         <ColumnConstraints />
         <ColumnConstraints />
         <ColumnConstraints />
-        <ColumnConstraints />
-        <ColumnConstraints />
+        <ColumnConstraints maxWidth="217.33333333333337" minWidth="217.33333333333337" prefWidth="217.33333333333337" />
+        <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
     </columnConstraints>
     <rowConstraints>
         <RowConstraints />
@@ -103,5 +103,3 @@
 
 
 </GridPane>
-
-
