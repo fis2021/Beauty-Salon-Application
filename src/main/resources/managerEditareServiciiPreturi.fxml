@@ -13,10 +13,10 @@
     <children>
         <TableView fx:id="table" layoutX="51.0" layoutY="185.0" prefHeight="386.0" prefWidth="918.0" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="185.0">
             <columns>
-                <TableColumn fx:id="id" prefWidth="52.00000077486038" text="ID" />
-                <TableColumn fx:id="servicii" prefWidth="187.19997787475586" text="SERVICII" />
-                <TableColumn fx:id="preturi" prefWidth="432.8000030517578" text="PRETURI" />
-                <TableColumn fx:id="editare" prefWidth="212.7999267578125" text="EDITARE" />
+                <TableColumn fx:id="id" id="id1" prefWidth="52.00000077486038" text="ID" />
+                <TableColumn fx:id="servicii" id="servicii1" prefWidth="187.19997787475586" text="SERVICII" />
+                <TableColumn fx:id="preturi" id="preturi1" prefWidth="432.8000030517578" text="PRETURI" />
+                <TableColumn fx:id="editare"  id= "edit" prefWidth="212.7999267578125" text="EDITARE" />
             </columns>
         </TableView>
         <Button fx:id="inapoi" id="inapoi3" layoutY="534.0" onAction="#handleInapoiAction" prefHeight="108.0" prefWidth="888.0" style="-fx-background-color: git; -fx-border-style: inset;  -fx-background-color: GAINSBORO;  -fx-border-style: outset; -fx-border-color: BLACK ;" text="Inapoi la pagina de manager"><font>

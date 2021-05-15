@@ -48,6 +48,8 @@ public class PaginaManagerProgramareAsteptare implements Initializable {
     infoProg.getItems().addAll(listProg);
     listAcc.addAll("Acceptare", "Respingere");
     acc.getItems().addAll(listAcc);
+
+
     }
 
     public void selectAction(){
