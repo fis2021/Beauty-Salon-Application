@@ -5,9 +5,11 @@ import org.dizitart.no2.objects.ObjectRepository;
 import org.BSA.exceptions.UsernameDoesNotExists;
 import org.BSA.model.User;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 import java.util.Objects;
 
 import static org.BSA.services.FileSystemService.getPathToFile;
@@ -15,9 +17,10 @@ import static org.BSA.services.FileSystemService.getPathToFile;
 public class UserService {
 
     public static ObjectRepository<User> userRepository;
-
-    public static void initDatabase() {
-        Nitrite database = Nitrite.builder()
+    public static Nitrite database;
+    public static void initDatabase()  {
+        FileSystemService.initDirectory();
+        database = Nitrite.builder()
                 .filePath(getPathToFile("BSA.db").toFile())
                 .openOrCreate("test", "test");
 
@@ -64,15 +67,19 @@ public class UserService {
         userRepository.insert(new User(username, encodePassword(username, password), role, telefon, nume, prenume, email));
     }
 
-    private static void checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistsException {
+    public static void checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistsException {
         for (User user : userRepository.find()) {
             if (Objects.equals(username, user.getUsername()))
                 throw new UsernameAlreadyExistsException(username);
         }
     }
 
+    public static List<User> getAllUsers(){
+    return userRepository.find().toList();
+    }
 
-    private static String encodePassword(String salt, String password) {
+
+    public static String encodePassword(String salt, String password) {
         MessageDigest md = getMessageDigest();
         md.update(salt.getBytes(StandardCharsets.UTF_8));
 

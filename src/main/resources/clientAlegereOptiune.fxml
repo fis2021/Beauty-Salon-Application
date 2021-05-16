@@ -10,31 +10,31 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.BSA.controllers.PaginaClientAlegereOptiune">
    <children>
-      <Button fx:id="Tuns" layoutX="371.0" layoutY="91.0" mnemonicParsing="false" onAction="#adaugareTuns" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color:  GAINSBORO;" text="Tuns" textFill="#160000">
+      <Button fx:id="Tuns" id="tuns" layoutX="371.0" layoutY="91.0" mnemonicParsing="false" onAction="#adaugareTuns" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color:  GAINSBORO;" text="Tuns" textFill="#160000">
          <font>
             <Font name="Book Antiqua Bold Italic" size="12.0" />
          </font></Button>
-      <Button fx:id="Vopsit" layoutX="510.0" layoutY="181.0" mnemonicParsing="false" onAction="#adaugareVopsit" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color:  GAINSBORO;" text="Vopsit">
+      <Button fx:id="Vopsit" id="vopsit" layoutX="510.0" layoutY="181.0" mnemonicParsing="false" onAction="#adaugareVopsit" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color:  GAINSBORO;" text="Vopsit">
          <font>
             <Font name="Book Antiqua Bold Italic" size="12.0" />
          </font></Button>
-      <Button fx:id="Makeup" layoutX="375.0" layoutY="150.0" mnemonicParsing="false" onAction="#adaugareMakeup" prefHeight="32.0" prefWidth="89.0" style="-fx-background-color:  GAINSBORO;" text="Makeup">
+      <Button fx:id="Makeup" id="makeup" layoutX="375.0" layoutY="150.0" mnemonicParsing="false" onAction="#adaugareMakeup" prefHeight="32.0" prefWidth="89.0" style="-fx-background-color:  GAINSBORO;" text="Makeup">
          <font>
             <Font name="Book Antiqua Bold Italic" size="12.0" />
          </font></Button>
-      <Button fx:id="Manichiura" layoutX="374.0" layoutY="218.0" mnemonicParsing="false" onAction="#adaugareManichiura" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color:  GAINSBORO;" text="Manichiura">
+      <Button fx:id="Manichiura" id="manichiura" layoutX="374.0" layoutY="218.0" mnemonicParsing="false" onAction="#adaugareManichiura" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color:  GAINSBORO;" text="Manichiura">
          <font>
             <Font name="Book Antiqua Bold Italic" size="12.0" />
          </font></Button>
-      <Button fx:id="Pedichiura" layoutX="508.0" layoutY="253.0" mnemonicParsing="false" onAction="#adaugarePedichiura" prefHeight="32.0" prefWidth="89.0" style="-fx-background-color:  GAINSBORO;" text="Pedichiura">
+      <Button fx:id="Pedichiura" id="pedichiura" layoutX="508.0" layoutY="253.0" mnemonicParsing="false" onAction="#adaugarePedichiura" prefHeight="32.0" prefWidth="89.0" style="-fx-background-color:  GAINSBORO;" text="Pedichiura">
          <font>
             <Font name="Book Antiqua Bold Italic" size="12.0" />
          </font></Button>
-      <Button fx:id="Tratamentefaciale" layoutX="376.0" layoutY="301.0" mnemonicParsing="false" onAction="#adaugareTratamenteFaciale" prefHeight="32.0" prefWidth="122.0" style="-fx-background-color:  GAINSBORO;" text="Tratamente faciale">
+      <Button fx:id="Tratamentefaciale" id="tratamente" layoutX="376.0" layoutY="301.0" mnemonicParsing="false" onAction="#adaugareTratamenteFaciale" prefHeight="32.0" prefWidth="122.0" style="-fx-background-color:  GAINSBORO;" text="Tratamente faciale">
          <font>
             <Font name="Book Antiqua Bold Italic" size="12.0" />
          </font></Button>
-      <Button fx:id="Gene" layoutX="513.0" layoutY="117.0" mnemonicParsing="false" onAction="#adaugareGene" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color:  GAINSBORO;" text="Gene">
+      <Button fx:id="Gene" id="gene" layoutX="513.0" layoutY="117.0" mnemonicParsing="false" onAction="#adaugareGene" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color:  GAINSBORO;" text="Gene">
          <font>
             <Font name="Book Antiqua Bold Italic" size="12.0" />
          </font></Button>
@@ -45,7 +45,7 @@
       <Text fx:id="Mesaj" layoutX="375.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="206.8033447265625" />
       <Text fx:id="Mesaj" layoutX="364.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="213.28717041015625" />
       <Text fx:id="Mesaj" layoutX="373.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.28717041015625" />
-      <Button fx:id="ButonInapoi" layoutY="406.0" onAction="#handleInapoiAction" prefHeight="84.0" prefWidth="601.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Inapoi">
+      <Button fx:id="ButonInapoi" id="inapoi2" layoutY="406.0" onAction="#handleInapoiAction" prefHeight="84.0" prefWidth="601.0" style="-fx-background-color: GAINSBORO; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Inapoi">
          <font>
             <Font name="Book Antiqua Bold Italic" size="24.0" />
          </font>

@@ -83,4 +83,7 @@ public class Login {
         return passwordField.getText();
     }
 
+    public static void setGetUserCurrent(String getUserCurrent) {
+        Login.getUserCurrent = getUserCurrent;
+    }
 }
