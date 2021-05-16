@@ -98,7 +98,7 @@ class UserServiceTest {
         });
     }
 
-    @Test
+   @Test
     @DisplayName("Verifica daca se adauga o optiune")
     void testAdaugareOptiune() throws Exception{
         UserService.addUser("denim", "deni" , "Client" , "0766532333", "Manta", "Denisa", "denim@yahoo.com");
